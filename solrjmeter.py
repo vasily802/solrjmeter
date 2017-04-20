@@ -25,7 +25,7 @@ import subprocess
 import re
 import glob
 import csv
-import simplejson
+import json as simplejson
 import datetime
 import time
 import copy
@@ -396,7 +396,7 @@ def setup_jmeter(options):
           rm -fr jmeter
         fi
 
-        wget -nc https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.9.tgz
+        wget -nc https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-2.9.tgz --no-check-certificate
         tar -xzf apache-jmeter-2.9.tgz
         mv apache-jmeter-2.9 jmeter
 
